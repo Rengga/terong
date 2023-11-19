@@ -1,0 +1,164 @@
+body {
+  background-image: url("bahan/bhn.svg");
+  background-size: cover;
+  object-fit: cover;
+  background-color: #2a154a;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+.loading {
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: 99999;
+}
+.load-kiri {
+  width: 50%;
+  height: 100%;
+  background-color: #bdabe5;
+  position: absolute;
+  left: 0;
+}
+.load-kiri img {
+  height: 100vh;
+}
+.load-kanan {
+  background-color: #bdabe5;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.load-kanan-urgen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.load-kanan .load-side {
+  height: 100%;
+  rotate: 180deg;
+}
+.load-img {
+  margin-left: x;
+  -webkit-transform: translate(-0%, -50%);
+  transform: translate(-0%, -50%);
+  top: 50%;
+  margin-left: -150px;
+  position: absolute;
+}
+
+.load-img img {
+  width: 300px;
+}
+.load-tampung {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.load-img img.ke-1 {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s infinite;
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.load-img img.ke-2 {
+  position: absolute;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.se1 .decor1 {
+  height: 350px;
+  width: 100%;
+  background-color: #7e5fcf;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+.dots-parent,
+.dots-parent2 {
+  display: flex;
+  gap: 15rem;
+  flex-direction: row;
+  width: 100%;
+  animation-direction: alternate;
+  animation: driftreverse 12s infinite;
+}
+.dots-parent {
+  justify-content: start;
+}
+.dots-parent2 {
+  justify-content: end;
+  animation: drift 12s infinite;
+}
+.dot1,
+.dot2,
+.dot3 {
+  border: 2px solid white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.dot1 {
+  background-color: #583f9a;
+}
+.dot2 {
+  background-color: #ffc15c;
+}
+.dot3 {
+  background-color: #ff49f9;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(1920px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes driftreverse {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-1920px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

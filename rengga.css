@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@100;200;500;600;700;800&display=swap");
+
+html {
+  font-size: 10px;
+  color: #1b2430;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* ===========ukuran========== */
+.full-w {
+  width: 100%;
+}
+.w50 {
+  width: 50%;
+}
+.full-h {
+  height: 100%;
+}
+.h100vh {
+  height: 100vh;
+}
+.w70 {
+  width: 70%;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.w25 {
+  width: 25%;
+}
+.w-fit {
+  width: fit-content;
+}
+
+.pos-rel {
+  position: relative;
+}
+.pos-abs {
+  position: absolute;
+}
+
+.idx-1 {
+  z-index: 1;
+}
+.idx-2 {
+  z-index: 2;
+}
+.idx-3 {
+  z-index: 3;
+}
+.idx-4 {
+  z-index: 4;
+}
+.idx-5 {
+  z-index: 5;
+}
+
+.g-0v75 {
+  gap: 0.75rem;
+}
+.g-1 {
+  gap: 1rem;
+}
+.g-1v5 {
+  gap: 1.5rem;
+}
+.g-2 {
+  gap: 2rem;
+}
+
+.rad-5 {
+  border-radius: 5px;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+.rad-circle {
+  border-radius: 50%;
+}
+
+/* ========end ukuran ====*/
+
+/* ========== warna======= */
+.bgc-very-dark {
+  background-color: #27374d !important;
+}
+.bgc-dark {
+  background-color: #526d82 !important;
+}
+.bgc-medium {
+  background-color: #9db2bf !important;
+}
+.bgc-light {
+  background-color: #dde6ed !important;
+}
+.bgc-black {
+  background-color: #000 !important;
+}
+.bgc-white {
+  background-color: #fff !important;
+}
+
+.bgc-primary-d {
+  background-color: #6e85b7 !important;
+}
+.bgc-primary-l {
+  background-color: #b2c8df !important;
+}
+.bgc-secondary-d {
+  background-color: #8787a3 !important;
+}
+.bgc-secondary-l {
+  background-color: #bdbdd7 !important;
+}
+.bgc-success-d {
+  background-color: #86c8bc !important;
+}
+.bgc-success-l {
+  background-color: #ceedc7 !important;
+}
+.bgc-danger-d {
+  background-color: #e97777 !important;
+}
+.bgc-danger-l {
+  background-color: #ff9f9f !important;
+}
+.bgc-warning-d {
+  background-color: #f6d186 !important;
+}
+.bgc-warning-l {
+  background-color: #fcf7bb !important;
+}
+.bgc-contrast-d {
+  background-color: #424874 !important;
+}
+.bgc-contrast-l {
+  background-color: #a6b1e1 !important;
+}
+
+/* =======end warna=========== */
+/* ========tombol========== */
+.btn-very-dark {
+  background-color: #27374d;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #fff;
+}
+.btn-very-dark:hover {
+  background-color: #526d82;
+}
+.btn-dark {
+  background-color: #526d82;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #fff;
+}
+.btn-dark:hover {
+  background-color: #27374d;
+}
+.btn-medium {
+  background-color: #9db2bf;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-medium:hover {
+  background-color: #dde6ed;
+}
+.btn-light {
+  background-color: #dde6ed;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-light:hover {
+  background-color: #9db2bf;
+}
+
+.btn-primary-d {
+  background-color: #6e85b7;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-primary-d:hover {
+  background-color: #b2c8df;
+}
+.btn-primary-l {
+  background-color: #b2c8df;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-primary-l:hover {
+  background-color: #6e85b7;
+}
+.btn-secondary-d {
+  background-color: #8787a3;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-secondary-d:hover {
+  background-color: #bdbdd7;
+}
+.btn-secondary-l {
+  background-color: #bdbdd7;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-secondary-l:hover {
+  background-color: #8787a3;
+}
+.btn-success-d {
+  background-color: #86c8bc;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-success-d:hover {
+  background-color: #ceedc7;
+}
+.btn-success-l {
+  background-color: #ceedc7;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-success-l:hover {
+  background-color: #86c8bc;
+}
+.btn-danger-d {
+  background-color: #e97777;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-danger-d:hover {
+  background-color: #ff9f9f;
+}
+.btn-danger-l {
+  background-color: #ff9f9f;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-danger-l:hover {
+  background-color: #e97777;
+}
+
+.btn-warning-d {
+  background-color: #f6d186;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-warning-d:hover {
+  background-color: #fcf7bb;
+}
+.btn-warning-l {
+  background-color: #fcf7bb;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-warning-l:hover {
+  background-color: #f6d186;
+}
+.btn-contrast-d {
+  background-color: #424874;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #fff;
+}
+
+.btn-contrast-d:hover {
+  background-color: #a6b1e1;
+  color: #000;
+}
+
+.btn-contrast-l {
+  background-color: #a6b1e1;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: fit-content;
+  height: fit-content;
+  border: unset;
+  transition: 0.3s;
+  cursor: pointer;
+  line-height: normal;
+  color: #000;
+}
+.btn-contrast-l:hover {
+  background-color: #424874;
+  color: #fff;
+}
+/* ==========end tombol ======== */
+/* ========== text========= */
+.text-dark {
+  color: #1b2430;
+}
+.text-light {
+  color: #eeeeee;
+}
+/* ========== end text========= */
+
+/* ===========display=============== */
+.hide {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+
+.jstfy-center {
+  justify-content: center;
+}
+.jstfy-evenly {
+  justify-content: space-evenly;
+}
+.jstfy-between {
+  justify-content: space-between;
+}
+.jstfy-end {
+  justify-content: end;
+}
+.jstfy-start {
+  justify-content: start;
+}
+
+.algn-center {
+  align-items: center;
+}
+.algn-start {
+  align-items: start;
+}
+.algn-end {
+  align-items: end;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.t-center {
+  text-align: center;
+}
+/* ===========end display=============== */
+/* ============ opsional ============ */
+.shadow-type-b {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.shadow-type-m {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+/* =========end opsional ============ */
+
+.bg-gradient-1 {
+  background: rgb(159, 13, 127);
+  background: linear-gradient(27deg, rgba(159, 13, 127, 1) 0%, rgba(234, 17, 121, 1) 100%);
+}
+.bg-gradient-1-v2 {
+  background: rgb(159, 13, 127);
+  background: linear-gradient(27deg, rgba(159, 13, 127, 1) 19%, rgba(234, 17, 121, 1) 100%);
+}
+
+.fc-24 {
+  color: #241468;
+}

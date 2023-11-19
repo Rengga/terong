@@ -14,17 +14,19 @@
     ></script>
   </head>
   <body>
-    <div class="loading flex flex-row h100vh">
-      <div class="load-kiri flex jstfy-end">
-        <img src="bahan/load-side.svg" alt="" />
-      </div>
-      <div class="load-kanan">
-        <div class="load-kanan-urgen">
-          <img src="bahan/load-side.svg" alt="" class="load-side" />
-          <div class="load-img">
-            <div class="load-tampung">
-              <img src="bahan/loadbg.svg" alt="" class="ke-1" />
-              <img src="bahan/load.webp" alt="" class="ke-2" />
+    <div class="loading-parent">
+      <div class="loading flex flex-row h100vh">
+        <div class="load-kiri flex jstfy-end">
+          <img src="bahan/load-side.svg" alt="" />
+        </div>
+        <div class="load-kanan">
+          <div class="load-kanan-urgen">
+            <img src="bahan/load-side.svg" alt="" class="load-side" />
+            <div class="load-img">
+              <div class="load-tampung">
+                <img src="bahan/loadbg.svg" alt="" class="ke-1" />
+                <img src="bahan/load.webp" alt="" class="ke-2" />
+              </div>
             </div>
           </div>
         </div>
@@ -40,22 +42,21 @@
   </body>
 </html>
 <script>
-  $(document).ready(function () {
-    setTimeout(function () {
-      $(".load-kiri").animate({
-        left: "-1500px",
-        opacity: "0",
-      });
-      $(".load-kanan").animate({
-        right: "-1500px",
-        opacity: "0",
-      });
-      $("body").css("overflow-y", "auto");
-    }, 5000);
-    setTimeout(function () {
-      $(".loading").hide();
-    }, 6000);
-  });
+  $(document).ready(function () {});
+  setTimeout(function () {
+    $(".load-kiri").animate({
+      left: "-1500px",
+      opacity: "0",
+    });
+    $(".load-kanan").animate({
+      right: "-1500px",
+      opacity: "0",
+    });
+    $("body").css("overflow-y", "auto");
+  }, 8000);
+  setTimeout(function () {
+    $(".loading-parent").remove();
+  }, 9000);
 
   for (var i = 0; i < 20; i++) {
     let dots = `

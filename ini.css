@@ -8,12 +8,17 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   background-attachment: fixed;
+  position: relative;
+}
+.loading-parent {
+  z-index: 99999;
+  position: absolute;
+  width: 100%;
 }
 .loading {
   background-size: cover;
   object-fit: cover;
   position: relative;
-  z-index: 99999;
 }
 .load-kiri {
   width: 50%;

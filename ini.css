@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #583f9a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7e5fcf;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bdabe5;
+  transition: 0.3s;
+}
 body {
   background-image: url("bahan/bhn.svg");
   background-size: cover;
@@ -59,11 +82,14 @@ body {
 
 .load-img img {
   width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 .load-tampung {
   width: 300px;
   height: 300px;
   position: relative;
+  border-radius: 50%;
 }
 .load-img img.ke-1 {
   -webkit-animation: spin 2s linear infinite;
@@ -72,8 +98,16 @@ body {
   border-radius: 50%;
   border: 10px solid white;
 }
-.load-img img.ke-2 {
+.load-img img.ke-2,
+.load-div {
   position: absolute;
+}
+.load-div {
+  background-color: #2a154a;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid white;
 }
 @-webkit-keyframes spin {
   0% {
@@ -93,6 +127,18 @@ body {
   }
 }
 
+.se1 {
+  position: relative;
+}
+
+.se1 .echi {
+  position: fixed;
+  height: 100vh;
+  z-index: 3;
+  transform: translateX(50%);
+  right: 50%;
+}
+
 .se1 .decor1 {
   height: 350px;
   width: 100%;
@@ -103,6 +149,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .dots {
@@ -117,6 +164,7 @@ body {
   width: 100%;
   animation-direction: alternate;
   animation: driftreverse 12s infinite;
+  max-width: 1920px;
 }
 .dots-parent {
   justify-content: start;
@@ -166,4 +214,111 @@ body {
   100% {
     transform: translateX(0px);
   }
+}
+
+@keyframes sos-anim {
+  0% {
+    padding-bottom: 0px;
+  }
+  25% {
+    padding-bottom: 8px;
+  }
+  75% {
+    padding-bottom: 4px;
+  }
+  85% {
+    padding-bottom: 2px;
+  }
+  100% {
+    padding-bottom: 0px;
+  }
+}
+.se1 .kotak {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  padding: 10px;
+  height: 60px;
+  align-items: end;
+}
+
+.sos-txt {
+  font-size: 2rem;
+  line-height: normal;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+.sos-txt:hover {
+  animation: sos-anim 0.5s infinite;
+}
+
+.echi-txt {
+  height: 240px;
+}
+
+.sosmed {
+  padding: 0 20px;
+  bottom: 20px;
+}
+
+.se2,
+.se3,
+.se4 {
+  position: relative;
+  z-index: 4;
+}
+
+.se3 {
+  background-image: url(bahan/bhn.svg);
+  background-color: #2a154a;
+  background-attachment: fixed;
+}
+
+.se4 .kotak,
+.se4 .kotak img {
+  max-width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-position: center;
+  object-fit: cover;
+}
+
+.shdw {
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+}
+
+.slide-parent {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  display: none;
+  /* transform: translate(-50%, -50%); */
+  z-index: 90;
+}
+
+.full-slide {
+  /* top: 50%;
+  left: 50%; */
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+}
+.full-slide .toThis {
+  border-radius: 20px;
+  height: 600px;
+  width: 600px;
+  background-position: center;
+  object-fit: cover;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 91;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }

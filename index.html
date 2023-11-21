@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Terong</title>
     <link rel="stylesheet" href="ini.css" />
     <link rel="stylesheet" href="rengga.css" />
     <script
@@ -12,6 +12,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referr
   </head>
   <body>
     <div class="loading-parent">
@@ -26,23 +41,52 @@
               <div class="load-tampung">
                 <img src="bahan/loadbg.svg" alt="" class="ke-1" />
                 <img src="bahan/load.webp" alt="" class="ke-2" />
+                <div class="load-div"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="se1 h100vh full-w flex algn-center">
+    <div class="se1 h100vh full-w flex flex-col jstfy-center">
+      <img src="bahan/echi.webp" alt="" class="echi" />
       <div class="decor1">
         <div class="dots-parent"></div>
+        <img src="bahan/echi elin.svg" alt="" class="echi-txt" />
         <div class="dots-parent2"></div>
+      </div>
+      <div class="full-w flex jstfy-between sosmed pos-abs">
+        <div class="kotak">
+          <div class="sos-txt fb">Facebook</div>
+          <div class="sos-txt yt">YouTube</div>
+        </div>
+        <div class="kotak">
+          <div class="sos-txt x">Twitter X</div>
+          <div class="sos-txt ig">Instagram</div>
+        </div>
       </div>
     </div>
     <div class="se2 h100vh full-w bgc-white"></div>
+    <div class="se3 h100vh full-w"></div>
+    <div class="se4 h100vh full-w bgc-white flex algn-center jstfy-center">
+      <div class="slide-parent">
+        <div class="full-slide shdw">
+          <img src="bahan/close.svg" alt="" class="close" />
+          <img src="" alt="" class="toThis" />
+        </div>
+      </div>
+      <div class="kotak shdw owl-carousel">
+        <img src="https://pbs.twimg.com/media/F_JI2EzWgAA3ql-?format=jpg&name=4096x4096" alt="" />
+        <img src="https://pbs.twimg.com/media/F--0EE5awAA87_Q?format=jpg&name=large" alt="" />
+        <img src="https://pbs.twimg.com/media/F-4x7wbaMAAqnVk?format=jpg&name=large" alt="" />
+      </div>
+    </div>
   </body>
 </html>
 <script>
   $(document).ready(function () {});
+
+  $(".load-div").fadeOut(3000);
   setTimeout(function () {
     $(".load-kiri").animate({
       left: "-1500px",
@@ -67,4 +111,23 @@
         </div>`;
     $(".se1 .decor1 .dots-parent, .se1 .decor1 .dots-parent2").append(dots);
   }
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
+  });
+
+  $(document).on("click", ".se4 .kotak img", function () {
+    let img = $(this).attr("src");
+    console.log(img);
+    $(".slide-parent .full-slide .toThis").prop("src", img);
+    $(".slide-parent").fadeIn("slow");
+  });
+
+  $(document).on("click", ".full-slide .close", function () {
+    $(".slide-parent").fadeOut("slow");
+  });
 </script>

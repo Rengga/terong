@@ -25,8 +25,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referr
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referr
+    />
   </head>
   <body>
     <div class="loading-parent">
@@ -49,7 +54,7 @@
       </div>
     </div>
     <div class="se1 h100vh full-w flex flex-col jstfy-center">
-      <img src="bahan/echi.webp" alt="" class="echi" />
+      <a href="#se2" class="echi"><img src="bahan/echi.webp" alt="" class="echi" /></a>
       <div class="decor1">
         <div class="dots-parent"></div>
         <img src="bahan/echi elin.svg" alt="" class="echi-txt" />
@@ -66,7 +71,48 @@
         </div>
       </div>
     </div>
-    <div class="se2 h100vh full-w bgc-white"></div>
+    <div class="se2 h100vh full-w bgc-white flex algn-center flex-col se-pad" id="se2">
+      <div class="title">
+        <span>Siapa Sih Si Ungu Ini?</span>
+      </div>
+      <div class="full-h flex algn-center max-w full-w">
+        <div class="kanan-kiri full-w flex jstfy-between">
+          <div class="kiri w50 pos-rel algn-center">
+            <img src="bahan/se2echi.webp" alt="" class="se2-echi" />
+            <img src="bahan/terong.svg" alt="" class="terong shdw" />
+            <img src="bahan/logo-echi.jpeg" alt="" class="logo-echi shdw" />
+          </div>
+          <div class="w50">
+            <div class="hal-parent flex algn-center">
+              <div class="next biodata-btn" data-value="0">Next</div>
+            </div>
+            <div class="kanan flex algn-center owl-carousel">
+              <div class="hal hal1 full-w">
+                <span class="p1">Dia...</span><br />
+                <span class="p2">Dia aslinya mah vtuber terong cuma gak ngaku aja.</span>
+              </div>
+              <div class="hal hal2 full-w">
+                <span class="p1">Mama : </span>
+                <span class="p2">Dhokidoki</span><br />
+                <span class="p1">Papa : </span>
+                <span class="p2">Reinly</span><br />
+                <span class="p1">lahir : </span>
+                <span class="p2">24 July</span><br />
+                <span class="p1">Tinggi : </span>
+                <span class="p2">168 cm</span>
+              </div>
+              <div class="hal hal4 full-w">
+                <span class="p1">Biografi : </span><br />
+                <span class="p2"
+                  >Dia berasal dari keluarga yang menakutkan dan terpaksa melanjutkan warisan keluarga. Namun, dia adalah seorang NEET dan ingin menjadi seorang
+                  IDOL.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="se3 h100vh full-w"></div>
     <div class="se4 h100vh full-w bgc-white flex algn-center jstfy-center">
       <div class="slide-parent">
@@ -84,7 +130,9 @@
   </body>
 </html>
 <script>
-  $(document).ready(function () {});
+  $(document).ready(function () {
+    window.scrollTo(0, 0);
+  });
 
   $(".load-div").fadeOut(3000);
   setTimeout(function () {
@@ -112,12 +160,16 @@
     $(".se1 .decor1 .dots-parent, .se1 .decor1 .dots-parent2").append(dots);
   }
 
-  $(".owl-carousel").owlCarousel({
+  $(".se2 .kanan").owlCarousel({
     loop: true,
     items: 1,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: false,
+  });
+
+  $(".se2 .next").click(function () {
+    $(".se2 .kanan").trigger("next.owl.carousel");
   });
 
   $(document).on("click", ".se4 .kotak img", function () {
@@ -129,5 +181,13 @@
 
   $(document).on("click", ".full-slide .close", function () {
     $(".slide-parent").fadeOut("slow");
+  });
+
+  $(".se4 .kotak").owlCarousel({
+    loop: true,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
   });
 </script>

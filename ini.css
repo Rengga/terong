@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+@font-face {
+  font-family: "dinoko";
+  src: url(bahan/Dinoko-Regular.otf);
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -137,6 +142,11 @@ body {
   z-index: 3;
   transform: translateX(50%);
   right: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.se1 .echi:hover {
+  height: 102vh;
 }
 
 .se1 .decor1 {
@@ -248,6 +258,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .sos-txt:hover {
@@ -321,4 +332,121 @@ body {
   cursor: pointer;
   width: 30px;
   height: 30px;
+}
+
+.max-w {
+  max-width: 1000px;
+  padding: 16px;
+}
+
+.se2 .kiri {
+  height: 330px;
+  max-width: 360px;
+}
+
+.se2 .se2-echi {
+  border: 6px solid #2a154a;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.se2 .terong {
+  border: 6px solid #2a154a;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  background-color: #bdabe5;
+}
+
+.se2 .logo-echi {
+  border: 6px solid #2a154a;
+  border-radius: 20px;
+  width: 180px;
+  position: absolute;
+  right: 0;
+  background-color: #bdabe5;
+  bottom: 0;
+}
+
+.title {
+  font-family: dinoko;
+  line-height: normal;
+  color: #583f9a;
+  font-size: 8rem;
+}
+.hal {
+  padding-left: 3px;
+  min-height: 456px;
+}
+.se-pad {
+  padding: 10px 0;
+}
+
+.hal .p1 {
+  font-family: dinoko;
+  font-size: 6rem;
+  color: #583f9a;
+}
+
+.hal .p2 {
+  font-family: dinoko;
+  font-size: 5rem;
+  color: #7e5fcf;
+}
+
+.se2 .next {
+  padding: 2px 10px;
+  border: #583f9a solid 3px;
+  width: 72px;
+  max-height: 40px;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: white;
+  color: #583f9a;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.se2 .next::after {
+  content: url(bahan/arw2.svg);
+  background-image: url(bahan/arw.svg);
+  color: white;
+  display: none;
+  top: -2px;
+  left: 44px;
+  background-size: 8px 32px;
+  min-width: 17px;
+  min-height: 5px;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+}
+.se2 .next:hover::after {
+  display: block;
+  position: absolute;
+  min-width: 49px;
+  min-height: 32px;
+  background-size: 55px 39px;
+}
+
+.se2 .next:hover {
+  background-color: #583f9a;
+  color: white;
+  width: 90px;
+}
+
+.se2 .hal-parent {
+  display: flex;
+  justify-content: end;
+}
+
+.kanan,
+.kanan .hal {
+  max-width: 486px;
 }
